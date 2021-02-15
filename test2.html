@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>text</title>
+	<meta charset="utf-8">
+	<style>
+		#a{
+			color: dimgrey;
+		}
+		#b{
+			color: red;
+		}
+		#c{
+			color: pink;
+		}
+		#d{
+			color: brown;
+		}
+		#e{
+			color: peru;
+
+		}
+		#s{
+			font-size:20pt;
+		}
+	</style>
+</head>
+<body>
+	<h1>LIST</h1>
+	<hr>
+	<ol id="s">
+		<li id="a">ブリ</li>
+		<li id="b">はまち</li>
+		<li id="c">たい</li>
+		<li id="d">まぐろ</li>
+		<li id="e">こはだ</li>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script>
+         $(function(){
+       		$('li').on("click", function(){
+       		$(this).hide();
+         });
+       	})
+       </script>
+</body>
+</html>
