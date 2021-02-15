@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test11</title>
+    <meta charset="utf-8">
+    <style>
+      .red{
+        color:red;
+      }
+      .blue{
+        color:blue;
+      }
+      .green{
+        color:green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>test11</h1>
+    ボタンを順番にクリックする
+
+    <hr>
+
+    <button id="aa">BTN1</button>
+    <button id="bb">BTN2</button>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+
+    $(function(){
+      let num = 0
+      let lz = 1
+      $("#aa").on("click", function(){
+        num++
+          if ( num >= 0 ) {
+            $('h1').addClass("red")
+          }else{
+            $("h1").removeClass( "red" )
+          }
+      })
+      $('#bb').on('click', function(){
+        if (num ==0) {
+            $('h1').addClass("green")
+        }else{
+
+          $("h1").css('color', 'blue');
+        }
+        })
+    });
+  </script>
+  </body>
+</html>

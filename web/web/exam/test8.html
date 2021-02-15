@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test8</title>
+    <meta charset="utf-8">
+    <style>
+      img{
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>test8。</h1>
+    <img src="gazo/a.png.jpg">
+    <h2>meo1</h2>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        const gazofiles = [
+           'gazo/a.png.jpg',
+             'gazo/b.png.png',
+             'gazo/c.png.jpg',
+             'gazo/e.png.jpg'
+        ]
+        const titles = [
+        `meo1`,
+        `meo2`,
+        `meo3`,
+        `meo4`
+        ]
+        let num = 0
+
+        $("img").on("click", function(){
+          num++
+           if ( num >= gazofiles.length ) {
+            num = 4
+          }
+          $("img").attr("src", gazofiles[ num ]);
+           $("h2").text( titles[ num ]);
+        })
+      })
+    </script>
+  </body>
+</html>

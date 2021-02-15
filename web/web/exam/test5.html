@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test5</title>
+</head>
+<style>
+	img{
+		width: 200pt;
+	}
+</style>
+<body>
+	<h1>IMG</h1>
+	<hr>
+	<img id="aa" src="gazo/a.png.jpg">
+	<img id="bb" src="gazo/b.png.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        const gazo = [
+          `gazo/a.png.jpg`,
+          `gazo/b.png.png`
+        ]
+        const imgs = [
+         `gazo/b.png.png`,
+          `gazo/a.png.jpg`
+        ]
+        let num = 0
+
+        $("img").on("click", function(){
+          num++
+           if ( num >= gazo.length ) {
+            num = 0
+          }
+          $("#aa").attr("src", gazo[ num ]);
+          $("#bb").attr("src", imgs[ num ]);
+        })
+      })
+    </script>
+</body>
+</html>
